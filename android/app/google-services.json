@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "808740408901",
+    "project_id": "cuisine-aff53",
+    "storage_bucket": "cuisine-aff53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808740408901:android:aadc3fce8bc84b367b9d2c",
+        "android_client_info": {
+          "package_name": "com.company.cuisinie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzAOmdIaH16iv90uE8Sr6qlFUtYVm9sLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
