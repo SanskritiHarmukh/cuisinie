@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController _searchController = TextEditingController();
   List<dynamic> _recipeSearchResults = [];
   List<dynamic> _videoSearchResults = [];
+  final String spoonacularApiKey = '2e5a16a95c80412c9ee132beb94d8fd8';
 
   void _searchRecipes(String query, String apiKey) async {
     // Search for recipes using MealDB API
@@ -119,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       style: TextStyle(color: Color(0xFF959595)),
                       onSubmitted: (value) {
-                        _searchRecipes(value, 'api key');
+                        _searchRecipes(value, 'API key');
                       },
                     ),
                   ),
