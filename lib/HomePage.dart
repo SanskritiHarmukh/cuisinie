@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'RecipeDetailsPage.dart';
 import 'CalendarPage.dart';
 import 'ProfilePage.dart';
+import 'SmartSearchPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,7 +16,6 @@ class _HomePageState extends State<HomePage> {
   TextEditingController _searchController = TextEditingController();
   List<dynamic> _recipeSearchResults = [];
   List<dynamic> _videoSearchResults = [];
-  final String spoonacularApiKey = '2e5a16a95c80412c9ee132beb94d8fd8';
 
   void _searchRecipes(String query, String apiKey) async {
     // Search for recipes using MealDB API
@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
 
     final refinedQuery = '$query recipe';
 
-
     final videoResponse = await http.get(Uri.parse('https://www.googleapis.com/youtube/v3/search?part=snippet&q=$refinedQuery&type=video&key=$apiKey'));
     if (videoResponse.statusCode == 200) {
       setState(() {
@@ -41,7 +40,6 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       style: TextStyle(color: Color(0xFF959595)),
                       onSubmitted: (value) {
-                        _searchRecipes(value, 'API key');
+                        _searchRecipes(value, 'AIzaSyBXiuJbXXg870Zr1b9QjN6LoqA6dlJcnOw');
                       },
                     ),
                   ),
@@ -133,6 +131,17 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                     child: Icon(Icons.calendar_month, color: Color(0xFF959595), size: 40,),
+                  ),
+                  SizedBox(width: 10),
+                  // Icon button to navigate to the fruit and vegetable recognition page
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SmartSearchPage()),
+                      );
+                    },
+                    child: Icon(Icons.camera_alt, color: Color(0xFF959595), size: 40,),
                   ),
                 ],
               ),
@@ -269,9 +278,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _addRecipeToCalendar(Map<String, dynamic> recipe, DateTime selectedDate) {
+    // Implement adding recipe to calendar logic here
   }
-
-
 
   Widget _buildVideoSearchResults() {
     if (_videoSearchResults.isEmpty) {
@@ -343,7 +351,6 @@ class _HomePageState extends State<HomePage> {
       );
     }
   }
-
 
   void _launchURL(String url) async {
     if (await canLaunch(url)) {

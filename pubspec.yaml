@@ -42,6 +42,8 @@ dependencies:
   fluttertoast: ^8.2.4
   cloud_firestore: ^4.15.8
   firebase_database: ^10.2.6
+  tflite_v2: ^1.0.0
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +68,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/Cuisinie.png
-
+    - assets/model.tflite
+    - assets/labels.txt
 
   # To add assets to your application, add an assets section, like this:
   # assets:

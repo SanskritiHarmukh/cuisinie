@@ -7,7 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: FirebaseOptions(
-      apiKey: "api key",
+      apiKey: "AIzaSyCzAOmdIaH16iv90uE8Sr6qlFUtYVm9sLA",
       appId: "1:808740408901:android:aadc3fce8bc84b367b9d2c",
       messagingSenderId: "808740408901",
       projectId: "cuisine-aff53",
