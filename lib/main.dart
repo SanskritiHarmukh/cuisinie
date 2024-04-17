@@ -1,3 +1,4 @@
+import 'package:cuisinie/HomePage.dart';
 import 'package:cuisinie/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -7,7 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: FirebaseOptions(
-      apiKey: "api",
+      apiKey: "AIzaSyCzAOmdIaH16iv90uE8Sr6qlFUtYVm9sLA",
       appId: "1:808740408901:android:aadc3fce8bc84b367b9d2c",
       messagingSenderId: "808740408901",
       projectId: "cuisine-aff53",
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }

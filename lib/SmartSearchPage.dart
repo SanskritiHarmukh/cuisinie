@@ -245,10 +245,3 @@ class _SmartSearchPageState extends State<SmartSearchPage> {
   }
 }
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Smart Search',
-    theme: ThemeData(primarySwatch: Colors.blue),
-    home: SmartSearchPage(),
-  ));
-}

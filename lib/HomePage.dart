@@ -6,6 +6,7 @@ import 'RecipeDetailsPage.dart';
 import 'CalendarPage.dart';
 import 'ProfilePage.dart';
 import 'SmartSearchPage.dart';
+import 'NutritionAnalysisPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       style: TextStyle(color: Color(0xFF959595)),
                       onSubmitted: (value) {
-                        _searchRecipes(value, 'Api key');
+                        _searchRecipes(value, 'AIzaSyAVIje_sMSMTGLuqY0ke_bOqSVPeWhJB3g');
                       },
                     ),
                   ),
@@ -133,7 +134,17 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(Icons.calendar_month, color: Color(0xFF959595), size: 40,),
                   ),
                   SizedBox(width: 10),
-                  // Icon button to navigate to the fruit and vegetable recognition page
+                  // Cooking events icon
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => NutritionAnalysisPage()),
+                      );
+                    },
+                    child: Icon(Icons.analytics, color: Color(0xFF959595), size: 40,),
+                  ),
+                  SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -271,7 +282,6 @@ class _HomePageState extends State<HomePage> {
       lastDate: DateTime(DateTime.now().year + 1),
     ).then((selectedDate) {
       if (selectedDate != null) {
-        // Add the selected recipe and date to the calendar
         _addRecipeToCalendar(recipe, selectedDate);
       }
     });
