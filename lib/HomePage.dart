@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       style: TextStyle(color: Color(0xFF959595)),
                       onSubmitted: (value) {
-                        _searchRecipes(value, 'AIzaSyAVIje_sMSMTGLuqY0ke_bOqSVPeWhJB3g');
+                        _searchRecipes(value, 'api key');
                       },
                     ),
                   ),

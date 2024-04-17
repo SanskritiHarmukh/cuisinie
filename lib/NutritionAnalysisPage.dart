@@ -12,8 +12,8 @@ class _NutritionAnalysisPageState extends State<NutritionAnalysisPage> {
   Map<String, dynamic>? _nutritionInfo;
 
   Future<void> fetchNutritionInfo(String food) async {
-    final appId = '7dc53acc';
-    final appKey = '38f3301ed0a068cabe1d8c8ba7977285	';
+    final appId = 'api';
+    final appKey = 'app id';
     final response = await http.get(Uri.parse(
         'https://api.edamam.com/api/nutrition-data?app_id=$appId&app_key=$appKey&ingr=$food'));
 
