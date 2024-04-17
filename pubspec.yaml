@@ -44,6 +44,7 @@ dependencies:
   firebase_database: ^10.2.6
   tflite_v2: ^1.0.0
   image_picker: ^1.0.7
+  html: ^0.15.0
 
 dev_dependencies:
   flutter_test:
