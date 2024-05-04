@@ -6,4 +6,6 @@ Starting a culinary journey frequently starts with a straightforward inquiry: "W
 
 The "Cuisinie: Machine Learning Infused Culinary Companion" project is centered around developing an innovative Flutter-based mobile application that transforms the culinary experience. This application will allow users to discover recipes through advanced search methods, including manual text input, intuitive filters (such as ingredients and cuisine type), and cutting-edge image recognition for ingredient-based searches. The platform will integrate diverse multimedia content like video tutorials, recipe blogs, and cooking techniques to enrich culinary knowledge. The aim of the Cuisinie project is to revolutionize cooking, making it accessible, enjoyable, and inspiring for users of all culinary backgrounds and expertise levels.
 
-Refer to the project report to know more.
+Refer to the [project report](https://github.com/SanskritiHarmukh/cuisinie/blob/main/Cuisinie%20-%20ML%20infused%20Culinary%20Companion.pdf) to know more.
+
+This project is a WIP.
